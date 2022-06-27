@@ -1,6 +1,6 @@
 // Light theme
 
-@mixin light-fallback {
+@mixin light-theme {
   color-scheme: light;
 
   // Colors
@@ -16,15 +16,16 @@
 
   // Derived colors
 
-  --primary:            #{$primary};
+  --primary:            var(--blue);
+  --secondary:          var(--orange); // and see --secondary-invert !!
 
-  --info:               #{$info};
-  --success:            #{$success};
-  --warning:            #{$warning};
-  --danger:             #{$danger};
+  --info:               var(--cyan);
+  --success:            var(--green);
+  --warning:            var(--yellow);
+  --danger:             var(--red);
 
-  --light:              #{$light};
-  --dark:               #{$dark};
+  --light:              var(--white-ter);
+  --dark:               var(--grey-darker);
 
   // Invert colors
 
@@ -40,6 +41,7 @@
   --primary-invert:     #{$primary-invert};
   --primary-light:      #{$primary-light};
   --primary-dark:       #{$primary-dark};
+  --secondary-invert:   var(--orange-invert);
   --info-invert:        #{$info-invert};
   --info-light:         #{$info-light};
   --info-dark:          #{$info-dark};
@@ -80,7 +82,7 @@
 
   // Code colors
 
-  --code:               #{$code};
+  --code:               #{$grey}; // #{$code};
   --code-background:    #{$code-background};
 
   --pre:                #{$pre};
@@ -90,8 +92,8 @@
 
   --link:               #{$link};
   --link-invert:        #{$link-invert};
-  --link-light:         #{$link-light};
-  --link-dark:          #{$link-dark};
+  --link-light:         #fff;
+  --link-dark:          #{$link}; // #{$link-dark};
   --link-visited:       #{$link-visited};
 
   --link-hover:         #{$link-hover};

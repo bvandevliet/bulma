@@ -1,6 +1,6 @@
 // Dark theme
 
-@mixin dark-fallback {
+@mixin dark-theme {
   color-scheme: dark;
 
   // Colors
@@ -16,7 +16,8 @@
 
   // Derived colors
 
-  --primary:            var(--turquoise);
+  --primary:            var(--cyan);
+  --secondary:          var(--orange); // and see --secondary-invert !!
 
   --info:               var(--cyan);
   --success:            var(--green);
@@ -37,50 +38,51 @@
   --purple-invert:      #{$purple-invert};
   --red-invert:         #{$red-invert};
   
-  --primary-invert:     #fff;
-  --primary-light:      #ebfffc;
-  --primary-dark:       #00947e;
-  --info-invert:        #fff;
-  --info-light:         #eff5fb;
-  --info-dark:          #296fa8;
-  --success-invert:     #fff;
-  --success-light:      #effaf5;
-  --success-dark:       #257953;
-  --warning-invert:     rgba(0, 0, 0, 0.7);
-  --warning-light:      #fffaeb;
-  --warning-dark:       #946c00;
-  --danger-invert:      #fff;
-  --danger-light:       #feecf0;
-  --danger-dark:        #cc0f35;
-  --light-invert:       rgba(0, 0, 0, 0.7);
-  --dark-invert:        #fff;
+  --primary-invert:     #{$primary-invert};
+  --primary-light:      #{$primary-light};
+  --primary-dark:       #{$primary-dark};
+  --secondary-invert:   var(--orange-invert);
+  --info-invert:        #{$info-invert};
+  --info-light:         #{$info-light};
+  --info-dark:          #{$info-dark};
+  --success-invert:     #{$success-invert};
+  --success-light:      #{$success-light};
+  --success-dark:       #{$success-dark};
+  --warning-invert:     #{$warning-invert};
+  --warning-light:      #{$warning-light};
+  --warning-dark:       #{$warning-dark};
+  --danger-invert:      #{$danger-invert};
+  --danger-light:       #{$danger-light};
+  --danger-dark:        #{$danger-dark};
+  --light-invert:       #{$light-invert};
+  --dark-invert:        #{$dark-invert};
 
   // General colors
 
-  --scheme-main:        var(--white);
-  --scheme-main-bis:    var(--white-bis);
-  --scheme-main-ter:    var(--white-ter);
-  --scheme-invert:      var(--black);
-  --scheme-invert-bis:  var(--black-bis);
-  --scheme-invert-ter:  var(--black-ter);
+  --scheme-main:        var(--black);
+  --scheme-main-bis:    var(--black-bis);
+  --scheme-main-ter:    var(--black-ter);
+  --scheme-invert:      var(--white);
+  --scheme-invert-bis:  var(--white-bis);
+  --scheme-invert-ter:  var(--white-ter);
 
-  --background:         var(--white-ter);
+  --background:         var(--black-ter);
 
-  --border:             var(--grey-lighter);
-  --border-hover:       var(--grey-light);
-  --border-light:       var(--grey-lightest);
-  --border-light-hover: var(--grey-light);
+  --border:             var(--grey-darker);
+  --border-hover:       var(--grey-dark);
+  --border-light:       var(--black-ter);
+  --border-light-hover: var(--grey-dark);
 
   // Text colors
 
-  --text:               var(--grey-dark);
-  --text-invert:        var(--grey-light);
+  --text:               var(--grey-light);
+  --text-invert:        var(--grey-dark);
   --text-light:         var(--grey);
-  --text-strong:        var(--grey-darker);
+  --text-strong:        var(--grey-lighter);
 
   // Code colors
 
-  --code:               #da1039;
+  --code:               var(--grey);
   --code-background:    var(--background);
 
   --pre:                var(--text);
@@ -88,18 +90,18 @@
 
   // Link colors
 
-  --link:               var(--blue);
-  --link-invert:        #fff;
-  --link-light:         #eff1fa;
-  --link-dark:          #3850b7;
+  --link:               var(--cyan);
+  --link-invert:        var(--cyan-invert);
+  --link-light:         #fff;
+  --link-dark:          var(--blue);
   --link-visited:       var(--purple);
 
-  --link-hover:         var(--grey-darker);
-  --link-hover-border:  var(--grey-light);
+  --link-hover:         var(--grey-lighter);
+  --link-hover-border:  var(--grey-dark);
 
-  --link-focus:         var(--grey-darker);
-  --link-focus-border:  var(--blue);
+  --link-focus:         var(--grey-lighter);
+  --link-focus-border:  var(--cyan);
 
-  --link-active:        var(--grey-darker);
-  --link-active-border: var(--grey-dark);
+  --link-active:        var(--grey-lighter);
+  --link-active-border: var(--grey-light);
 }
